@@ -47,9 +47,9 @@ char UpdateGenderText(char ch){
     else return upper(ch);
 }
 
-Atm *customer;
 int main(){
     // Take Customer Details - Input From User
+    Atm *customer; // Create a new user
     int id, age, pine; double balance; unsigned long long account_no; string name; char gender;
     cout << "Are you new user? If 'Yes' press '1': "; int ask; cin >> ask; cout << endl;
     cout << "Enter Customer-ID: "; cin >> id; 
