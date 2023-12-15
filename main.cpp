@@ -169,5 +169,6 @@ int main(){
     if(i == 10){
         cout << "Sorry You have tried many times." << endl;
     }
+    delete customer;
     return 0;
 }
