@@ -11,12 +11,12 @@ using namespace std;
 #define MALE 'M'
 #define FEMALE 'F'
 
-inline void AgeLimitDes(const Atm *customer){
+inline void AgeLimitDes(const Atm *customer, string limit_age){
     if(customer->getGender() == MALE){
-        cout << "\t-- He is Teenager." << endl;
+        cout << "\t-- He is " << limit_age << "." << endl;
     }
     else if(customer->getGender() == FEMALE){
-        cout << "\t-- She is Teenager." << endl;
+        cout << "\t-- She is " << limit_age << "." << endl;
     }
 }
 
@@ -26,13 +26,13 @@ void PrintCustomerDetails(const Atm *customer){
     cout << "\t-- Hi " << customer->name << " have a good day." << endl;
     cout << "\t-- A/c No: " << customer->getAccountNo() << " | " << "ATM Pine: " << customer->getPine() << endl;
     if(customer->getAge() >= 13 && customer->getAge() < 18){
-        AgeLimitDes(customer);
+        AgeLimitDes(customer,"Teenger");
     }
     else if(customer->getAge() >= 18 && customer->getAge() < 21){
-        AgeLimitDes(customer);
+        AgeLimitDes(customer, "Adult");
     }
     else{
-        AgeLimitDes(customer);
+        AgeLimitDes(customer, "Old");
     }
     cout << "\t-- Availble Balance is " << customer->getBalance() << "\n\n" << END_LINE << endl;
 }
